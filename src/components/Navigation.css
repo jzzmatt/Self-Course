@@ -1,0 +1,66 @@
+body {
+  height: 100vh;
+}
+
+.navigation__menu .menu__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+  padding: 10px;
+}
+
+.menu__header button {
+  padding: 10px 30px;
+  background: orange;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  outline-offset: 5px;
+  position: relative;
+  /*overflow: hidden;*/
+  z-index: 200;
+}
+
+.menu__header button:focus {
+  outline: none;
+}
+
+.menu__header button:active {
+  outline: 4px solid green;
+}
+
+.menu__header h2 {
+  background: #3c3c3c;
+  padding: 10px;
+  border-radius: 20px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.menu__header h2:active,
+focus {
+  transform: scale(1.2);
+}
+
+/*--- MENU LIST --- */
+
+.menu__item {
+  margin-left: 10px;
+  /*border: 1px solid #3333;*/
+  display: inline-block;
+  position: absolute;
+  transform: translateY(-210px);
+  transition: all 0.4s ease-in-out;
+  z-index: 10;
+  visibility: hidden;
+}
+.menu__item ul > * {
+  margin-bottom: 5px;
+  padding: 20px 10px;
+}
+
+.displaymenu {
+  visibility: visible;
+  transform: translateY(0);
+}
